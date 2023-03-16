@@ -1,29 +1,22 @@
 import numpy as np
 
-def  generate_uniform(low, high, size):
-    data = np.random.uniform(low, high, size)
-    return np.unique(data)
-
 def generate_normal(mu, sigma, size):
-    data = np.random.normal(mu, sigma, size)
-    return np.unique(data)
+    return np.random.normal(mu, sigma, size)
+
+def  generate_uniform(low, high, size):
+    return np.random.uniform(low, high, size)
 
 def generate_beta(a,b ,size):
-    data = np.random.beta(a, b, size)
-    return np.unique(data)
-
+    return np.random.beta(a, b, size)
 
 def  generate_exponential(scale, size):
-    data = np.random.exponential(scale, size)
-    return np.unique(data)
+    return np.random.exponential(scale, size)
 
 def generate_lognormal(mean, sigma, size):
-    data = np.random.lognormal(mean, sigma, size)
-    return np.unique(data)
+    return np.random.lognormal(mean, sigma, size)
 
 def generate_chisquare(df, size):
-    data = np.random.chisquare(df, size)
-    return np.unique(data)
+    return np.random.chisquare(df, size)
 
 def get_ids(data):
     return np.array(range(data.shape[0])).reshape(data.shape[0], 1) +1 
